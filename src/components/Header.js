@@ -14,7 +14,6 @@ export const Header = () => {
         title={`Provide username and password`}
       >
           <FormLogin />
-
       </ModalWindow>
     </div>
   );
