@@ -1,19 +1,20 @@
 import React from "react";
-
 import Category from "./components/Category";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AllCategories from "./components/AllCategories";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AllCategories from "./components/AllCategories";
-
+import './css/headerfooter.scss';
+import './css/modal.scss'
+import './css/home.scss'
 
 function App() {
   return (
     <>
-    <header>
+   
     <Header />
-    </header>
+   
     <Router>
       <Routes>
         <Route exact path = "/" element = {<Home />} />
@@ -21,9 +22,9 @@ function App() {
           <Route exact path="allCategories" element={<AllCategories />} />
         </Routes>
       </Router>
-      <footer>
+      
         <Footer />
-      </footer>
+    
     </>
   );
 }
