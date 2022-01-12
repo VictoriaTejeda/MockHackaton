@@ -6,7 +6,6 @@ import { Header } from "./components/Header";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AllCategories from "./components/AllCategories";
-import { CategoriesPage } from "./CategoriesPage";
 
 
 function App() {
@@ -25,8 +24,6 @@ function App() {
       <footer>
         <Footer />
       </footer>
-
-    <CategoriesPage></CategoriesPage>
     </>
   );
 }
