@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect}from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import {
   Search,
@@ -7,6 +7,7 @@ import {
 } from "../Styles.js/search";
 import promo1 from "../img/Promo-1.gif";
 import promo2 from "../img/Promo-2.gif";
+
 
 function Home() {
   return (

@@ -9,7 +9,7 @@ import add from "../assets/add.png";
 import edit from "../assets/edit.png";
 import trash from "../assets/trash.png";
 import { useCategory } from "../hooks/useCategory";
-import { Card } from "@mui/material";
+
 
 function AllCategories() {
   const { category } = useCategory();
