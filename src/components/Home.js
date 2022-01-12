@@ -1,29 +1,36 @@
-import React from 'react'
-import SearchIcon from '@mui/icons-material/Search';
-import {Search, StyledInputBase, SearchIconWrapper} from '../Styles.js/search'
-import promo1 from '../img/Promo-1.gif'
-import promo2 from '../img/Promo-2.gif'
+import React from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import {
+  Search,
+  StyledInputBase,
+  SearchIconWrapper,
+} from "../Styles.js/search";
+import promo1 from "../img/Promo-1.gif";
+import promo2 from "../img/Promo-2.gif";
 
 function Home() {
-    return (
-        <div className='home-container'>
-            <section className='items-container'>
-                <section className='arrow-container'>
-                    <img src='https://i.ibb.co/86rC1ds/right-arrow-3-2x.png' alt='arrow' />
-                   <span> See all promotions</span>
-                </section>
-                <section className='search'>
-                <Search>
-                    <SearchIconWrapper>
-                    <SearchIcon />
-                    </SearchIconWrapper>
-                    <StyledInputBase
-                    placeholder="Search products"
-                    inputProps={{ 'aria-label': 'search' }}
-                    />
-                </Search>
-                </section>
-            </section>
+  return (
+    <div className="home-container">
+      <section className="items-container">
+        <section className="arrow-container">
+          <img
+            src="https://i.ibb.co/86rC1ds/right-arrow-3-2x.png"
+            alt="arrow"
+          />
+          <span> See all promotions</span>
+        </section>
+        <section className="search">
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search products"
+              inputProps={{ "aria-label": "search" }}
+            />
+          </Search>
+        </section>
+      </section>
 
             <section className='promos'>
                 <section>
@@ -49,4 +56,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home;

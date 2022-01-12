@@ -2,7 +2,7 @@ import React from "react";
 import { useTools } from "../hooks/useTools";
 import { FormLogin } from "./FormLogin";
 import { ModalWindow } from "./ModalWindow";
-import logo from '../img/logo.png'
+
 export const Header = () => {
   const { handleClose, handleOpen, open } = useTools();
   return (
