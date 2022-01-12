@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+}
+
+header {
+  //border-bottom-width: 10px solid #000;
+  background: #eeeeee;
+  border-bottom: {
+    style: solid;
+    width: 5px;
+    color: #5ac7bc38;
+  };
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: {
+      right: 20px;
+      left: 20px;
+    };
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .nav-btns {
+      display: flex;
+      width: fit-content;
+      button {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        padding: 5px;
+        border: {
+          style: none;
+          bottom: {
+            style: solid;
+            color: #5ac7bca1;
+            width: 5px;
+          };
+        }
+        outline: none;
+      }
+ 
+    }
+  }
+}
+
+footer {
+  background: #eeeeee;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Comfortaa;
+  font-style: Regular;
+  font-size: 18px;
+  position: sticky;
+  bottom: 0px;
+}

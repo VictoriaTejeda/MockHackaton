@@ -6,13 +6,14 @@ import promo2 from '../img/Promo-2.gif'
 
 function Home() {
     return (
-        <>
-            <section className='home-container'>
-                <p>
+        <div className='home-container'>
+            <section className='items-container'>
+                <section className='arrow-container'>
                     <img src='https://i.ibb.co/86rC1ds/right-arrow-3-2x.png' alt='arrow' />
-                    See all promotions
-                </p>
-                <Search className='search'>
+                   <span> See all promotions</span>
+                </section>
+                <section className='search'>
+                <Search>
                     <SearchIconWrapper>
                     <SearchIcon />
                     </SearchIconWrapper>
@@ -21,21 +22,26 @@ function Home() {
                     inputProps={{ 'aria-label': 'search' }}
                     />
                 </Search>
+                </section>
             </section>
+
             <section className='promos'>
-                <img src={promo1} alt='promo1'/>
-                <img src={promo2} alt='promo2'/>
+                <img src={promo1} alt='promo1' id='promo1' />
+                <img src={promo2} alt='promo2' id='promo2' />
             </section>
-            <p>
+            <section className='see-categories'>
+            <section className='link-categories'>
                 <img src='https://i.ibb.co/86rC1ds/right-arrow-3-2x.png' alt='arrow' />
-                See all categoryes
-            </p>
-            <section clasName='categorys'>
+                <span>See all categories</span>
+            </section>
+            </section>
+            
+            <section className='categories-container'>
                 <img src='https://i.ibb.co/dPRWyNJ/MEN2.png' alt='category'/>
                 <img src='https://i.ibb.co/ccvVnxZ/SHOES.png' alt='category'/>
                 <img src='https://i.ibb.co/VMjXrjP/WOMAN-2.png' alt='category'/>
             </section>
-        </>
+        </div>
     )
 }
 
