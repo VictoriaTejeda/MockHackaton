@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+--------------------Header----------------------
+header {
+    border-bottom-width: 10px solid #000;
+    background: #EEEEEE;
+    width: 1440px;
+    height: 103px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.header {
+    background: #EEEEEE;
+    width: 1440px;
+    height: 103px;
+    display: flex;
+    align-items: center;
+    
+
+
+}
+
+.navButtons{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+
+img {
+    margin: 20px; 
+}
+
+.loginButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    font-size: 20px;
+    font-family: Comfortaa;
+    font-style: Regular;
+}
+
+
+.logo {
+    margin-left: 5rem;
+    margin-right: 61rem;
+}
+
+---------------Footer------------------
+.footer {
+    background: #EEEEEE;
+    width: 1440px;
+    height: 57px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: black;
+    font-family: Comfortaa;
+    font-style: Regular;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+
+}
