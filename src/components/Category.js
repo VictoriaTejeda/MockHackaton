@@ -3,18 +3,8 @@ import React, { useState } from "react";
 import { Header } from './Header' */
 import "./AdmCategory.scss";
 
-function CategoryPage({ recovery }) {
-  /* const [inputValue, setInputValue] = useState("");
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-      };
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        if (inputValue.trim().length > 2) {
-          setCategories((cats) => [inputValue, ...cats]);
-          setInputValue("");
-        }
-      };*/
+function CategoryPage({ recovery, defaultData, editUser }) {
+
   return (
     <>
       {recovery ? (
@@ -25,22 +15,31 @@ function CategoryPage({ recovery }) {
             Back to categories list
           </button>
           <div className="categories">
-            <input className="categoryName" type="text" defaultValue={recovery.name} >
+            <input
+              className="categoryName"
+              name="name"
+              type="text"
+              defaultValue={recovery.name}
+              onChange={(e)=>defaultData(e)}
+            >
               {/* <img src="https://i.ibb.co/GQZQSWz/folder-2.png" alt="150519-1" border="0" /> */}
             </input>
-            <input className="categoryImage" type="text">
+            <input name="url" className="categoryImage" type="text" defaultValue={recovery.url}
+              onChange={defaultData}>
               {/* <img src="https://i.ibb.co/GQZQSWz/folder-2.png" alt="150519-1" border="0" /> */}
             </input>
-            <input className="description" type="text"></input>
+            <input name="description" className="description" type="text" defaultValue={recovery.description}
+              onChange={defaultData}></input>
           </div>
           <div className="buttons">
             <button
               onClick={(e) => {
                 e.preventDefault();
+                editUser(recovery.id);
+                window.location.href = "./allCategories"
               }}
             >
-              {" "}
-              Save{" "}
+              Save
             </button>
             <button> Delete </button>
           </div>
@@ -53,7 +52,10 @@ function CategoryPage({ recovery }) {
             Back to categories list
           </button>
           <div className="categories">
-            <input className="categoryName" type="text">
+            <input
+              className="categoryName"
+              type="text"
+            >
               {/* <img src="https://i.ibb.co/GQZQSWz/folder-2.png" alt="150519-1" border="0" /> */}
             </input>
             <input className="categoryImage" type="text">
@@ -67,8 +69,7 @@ function CategoryPage({ recovery }) {
                 e.preventDefault();
               }}
             >
-              {" "}
-              Save{" "}
+              Save
             </button>
             <button> Delete </button>
           </div>
