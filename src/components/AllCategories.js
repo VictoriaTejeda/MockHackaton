@@ -10,6 +10,7 @@ import trash from "../assets/trash.png";
 import { useCategory } from "../hooks/useCategory";
 import CategoryPage from "./Category";
 
+
 function AllCategories() {
   const {recoverDataFn, category, conditionalRender, recovery, defaultData, changeCondition, editUser } = useCategory();
   
