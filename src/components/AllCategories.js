@@ -12,6 +12,11 @@ import CategoryPage from "./Category";
 
 
 function AllCategories() {
+  function admCategory(e) {
+    e.preventDefault();
+    window.location.href = "./category";
+  }
+
   const {recoverDataFn, category, conditionalRender, recovery, defaultData, changeCondition, editUser } = useCategory();
   
   
@@ -20,6 +25,8 @@ function AllCategories() {
       {conditionalRender ? (
         <>
           <div>
+          <button className="add-category" onClick={admCategory}>
+              <img src={add} alt="logo-img" className="add" /> Add new category</button>
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />

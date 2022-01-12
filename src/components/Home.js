@@ -10,6 +10,12 @@ import promo2 from "../img/Promo-2.gif";
 
 
 function Home() {
+
+  function allCategories(e) {
+    e.preventDefault();
+    window.location.href = "./allCategories";
+  }
+
   return (
     <div className="home-container">
       <section className="items-container">
@@ -40,7 +46,7 @@ function Home() {
                 </section>
             </section>
             <section className='see-categories'>
-            <section className='link-categories'>
+            <section onClick={allCategories} className='link-categories'>
                 <img src='https://i.ibb.co/86rC1ds/right-arrow-3-2x.png' alt='arrow' />
                 <span>See all categories</span>
             </section>
