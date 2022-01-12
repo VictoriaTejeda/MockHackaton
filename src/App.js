@@ -1,14 +1,26 @@
 import React from "react";
 import Category from "./components/Category";
+import Footer from "./components/Footer";
 import { Header } from "./components/Header";
-
+import Home from "./components/Home";
+import { BrowserRouter as Router, Route , Routes} from "react-router-dom";
 
 function App() {
   return (
-    <> 
+    <>
+    <header>
     <Header />
-     <Category />
-     </>
+    </header>
+    <Router>
+      <Routes>
+        <Route exact path = "/" element = {<Home />} />
+        <Route exact path = "category" element = {<Category />} />
+      </Routes>
+      </Router>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
 
