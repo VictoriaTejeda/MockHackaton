@@ -2,7 +2,9 @@
 
 $greenaqua: #5ac7bd;
 
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font: {
@@ -79,14 +81,7 @@ $greenaqua: #5ac7bd;
     }
   }
 }
-=======
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
 
---------------------Header----------------------
 header {
     border-bottom-width: 10px solid #000;
     background: #EEEEEE;
