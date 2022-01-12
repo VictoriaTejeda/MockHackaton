@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
-import { BotonPrueba } from './BotonPrueba';
-import { ModalWindow } from './ModalWindow';
+import React from "react";
+import { useTools } from "../hooks/useTools";
+import { FormLogin } from "./FormLogin";
+import { ModalWindow } from "./ModalWindow";
 
 export const Header = () => {
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    const [open, setOpen] = useState(false);
+  const { handleClose, handleOpen, open } = useTools();
+  return (
+    <div>
+      <button onClick={handleOpen}>Pinchame</button>
+      <ModalWindow
+        open={open}
+        handleClose={handleClose}
+        title={`Provide username and password`}
+      >
+          <FormLogin />
 
-    return (
-        <div>
-
-            <button onClick={handleOpen}>Pinchame</button>
-            <BotonPrueba />
-            <ModalWindow open={open} handleClose={handleClose} title={"Login"} />
-        </div>
-    )
-}
-
+      </ModalWindow>
+    </div>
+  );
+};

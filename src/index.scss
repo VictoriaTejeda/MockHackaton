@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Poppins:wght@400;700&display=swap");
+
+$greenaqua: #5ac7bd;
+
+* {
+  margin: 0;
+  padding: 0;
+  font: {
+    family: "Comfortaa", cursive;
+    size: 20px;
+  }
+}
+
+.modal {
+  .modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    background-color: #FFFEFA;
+    border: {
+      width: 3px;
+      style: solid;
+      color: $greenaqua;
+      radius: 10px;
+    }
+    box-shadow: 24px;
+    transform: translate(-50%, -50%);
+    #close-modal {
+      display: flex;
+      justify-content: flex-end;
+    }
+    #title-container {
+      display: flex;
+      justify-content: center;
+      #title {
+        font-weight: 700;
+        width: 70%;
+      }
+    }
+  }
+}
+.form-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  #input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    input {
+      font-size: 20px;
+      background-color: #fed3d52f;
+      box-shadow: 0 5px 5px 0px #b1afafa8 inset;  
+      height: 45px;
+      width: 100%;
+      margin: 10px;
+      text-align: center;
+      border: {
+        radius: 15px;
+        width: 1px;
+        color: $greenaqua;
+        style: solid;
+      }
+      outline: none;
+    }
+    button {
+      margin: 35px;
+      background-color: $greenaqua;
+      width: 150px;
+      height: 40px;
+      border: {
+        radius: 50px;
+        color: transparent;
+      }
+    }
+  }
+}
