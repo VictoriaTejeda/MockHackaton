@@ -3,7 +3,9 @@ import Category from "./components/Category";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Route , Routes} from "react-router-dom";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AllCategories from "./components/AllCategories";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       <Routes>
         <Route exact path = "/" element = {<Home />} />
         <Route exact path = "category" element = {<Category />} />
-      </Routes>
+          <Route exact path="allCategories" element={<AllCategories />} />
+        </Routes>
       </Router>
       <footer>
         <Footer />
