@@ -5,12 +5,14 @@ import {
   StyledInputBase,
   SearchIconWrapper,
 } from "../Styles.js/search";
-import add from '../assets/add.png'
-import edit from '../assets/edit.png'
-import trash from '../assets/trash.png'
-
+import add from "../assets/add.png";
+import edit from "../assets/edit.png";
+import trash from "../assets/trash.png";
+import { useCategory } from "../hooks/useCategory";
+import { Card } from "@mui/material";
 
 function AllCategories() {
+  const { category } = useCategory();
   return (
     <div>
       <Search>
@@ -25,10 +27,16 @@ function AllCategories() {
       <div>
         <img src={add} alt="logo-img" className="add" />
         <button className="add-category"> Add new category</button>
-        <div className="Card">
-          <img src={edit} alt="logo-img" className="edit" />
-          <img src={trash} alt="logo-img" className="delete" />
-        </div>
+        {category &&
+          category.map((card) => (
+            <div key={card.id} className="Card">
+                <img src={card.url} alt="img-Category" className="img-card" />
+              <>
+                <img src={edit} alt="logo-img" className="edit" />
+                <img src={trash} alt="logo-img" className="delete" />
+              </>
+            </div>
+          ))}
       </div>
     </div>
   );
