@@ -1,10 +1,11 @@
 import React from "react";
+import { CategoriesPage } from "./CategoriesPage";
 
 function App() {
   return (
-    <div className="App">
-     Nuevo cambio
-    </div>
+    <>
+    <CategoriesPage></CategoriesPage>
+    </>
   );
 }
 
