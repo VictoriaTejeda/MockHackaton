@@ -3,7 +3,6 @@ import Category from "./components/Category";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import Home from "./components/Home";
-import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AllCategories from "./components/AllCategories";
 
